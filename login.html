@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN form</title>
+    <style>
+        .form-action{
+            width: 400px;
+        }
+        .logo-wristia{
+            width: 300px;
+            height: 100px;
+            
+            margin: 60px;
+        }
+        .input-tag{
+            display: flex;
+            flex-direction: column;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            background: #fff;
+            display: flex;
+            font-family: sans-serif;
+        }
+        .container{
+            /* margin: 5%; */
+            /* margin-top: 1%; */
+            width: 500px;
+            max-width: 90%;
+        }
+        .container form {
+            width: 100%;
+            height: 100%;
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            /* box-shadow: 0 8px 16px rgba(0, 0, 0, .3); */
+        }
+        .container form img{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container form .form-control{
+            width: 100%;
+            height: 40px;
+            background: white;
+            border-radius: 4px;
+            border: 1px solid lightgrey;
+            margin: 10px 0 18px 0;
+        
+            padding: 0 10px;
+        }
+        input[type=email]:focus{
+            outline: none !important;
+            border: 1px solid rgb(65, 125, 161);
+        }
+        input[type=password]:focus{
+            outline: none !important;
+            border: 1px solid rgb(67, 125, 161);
+        }
+        .sign{
+            display: flex;
+            justify-content: space-between;
+        }
+        a .sign-in{
+            padding: 15px 80px;
+            background-color: #1e64f0;
+            color: white;
+            font-weight: 400;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            margin-bottom:20px;
+            cursor: pointer;
+        }
+        .sign-in:hover{
+            background-color: #1e64f0;
+            transform: translateY(-0.24em);
+        }
+       a .or-sign{
+            font-size: 13px;
+            font-weight: 100;
+            color: grey;
+            text-align: center;
+            position: relative;
+            max-width: 180px;
+            margin: auto;
+        }
+        .or-sign:before{
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            background: black;
+            left: 0;
+            top: 50%;
+        }
+        .or-sign:after{
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            background: black;
+            right: 0;
+            top: 50%;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            margin-bottom: 60px;
+        }
+        .column{
+            border: 1px solid black;
+            border-radius: 4px;
+            background-color: white;
+            padding: 7px 20px;
+            text-align: center;
+            font-size: 15px;
+         
+        }
+        a{
+            text-decoration: none;
+            color: rgb(65, 63, 63);
+            list-style-type: none;
+            text-align: center;
+    
+        }
+        .text-img{
+            position: relative;
+            text-align:center ;
+            max-width: 350px;
+            margin: auto;
+            font-size: 14px;
+        }
+    .NavLogo{
+        width: 3rem;
+        height: 2rem;
+        color: #1e64f0;
+        margin-top: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    </style>
+</head>
+<body>
+    <svg class="NavLogo" fill="currentColor" viewBox="0 0 35 27"><path d=" M29.6295323,14.305275 C33.6127581,11.8044 34.4087258,10.2249 34.4087258, 10.2249 C34.4087258,10.2249 35.8855,21.752775 20.7463065,25.899525 C16.0879194,27.177525 5.58453226,26.5689 3.90453226,26.5689 C2.22566129, 26.5689 0.000338709677,26.558775 0.000338709677,26.558775 L6.42453226, 19.34415 C8.16662903,17.390025 9.05630645,16.98165 10.9982419,16.98165 C12.9311452,16.98165 17.4337258,17.174025 19.8769516,16.9389 C24.4088871,16.50015 27.9337258,15.369525 29.6295323,14.305275 Z "></path><path d=" M10.931629,14.1339375 C12.8701774,14.2644375 17.1413065,14.2171875 20.0395323,13.9978125 C23.2053387,13.7570625 27.7214677,12.7254375 30.7721129,10.3719375 C32.3358226,9.1648125 33.6974355,7.4874375 34.0022742,5.6413125 C34.7327581,1.2166875 32.2251774,0.0005625 32.2251774,0.0005625 C32.2251774,0.0005625 32.3313065,3.6005625 25.6846935,4.3655625 C19.7877581,5.0439375 0.000338709677,4.5343125 0.000338709677,4.5343125 L6.36017742,11.7995625 C8.08308065,13.7705625 8.99759677,13.9978125 10.931629,14.1339375 "></path></svg>
+    <div class="container">
+        <form action="">
+            <img src="/images/wristlia logo.svg"  class="logo-wristia" height="100px" width="300px" >
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <a href="/password.html">Forget password</a>
+                <input type="password" class="form-control" required>
+            </div>
+
+            <div class="sign">
+                <div>
+                <input type="checkbox">
+                <label for="">Remember me</label>
+                 </div>
+                <a href="sign-in.html"><button class="sign-in">Sign in</button></a>
+            </div>
+
+            <a href="sign-in.html"><p class="or-sign ">Or sign in with</p></a>
+
+            <div class="row">
+                <div class="column">
+                 <a class="OauthButton" data-testid="button-oauth-google" href="/auth/google/new?app=wistia&amp;local_source=login" id="google_oauth">
+                     <svg class="OauthButton__icon" height="18" width="18" viewBox="0 0 18 18"><g fill="none" fill-rule="evenodd"><path d=" M17.64 9.205c0-.639-.057-1.252-.164-1.841H9v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z " fill="#4285F4"></path><path d=" M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86 -3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z " fill="#34A853"></path><path d=" M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H .957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z " fill="#FBBC05"></path><path d=" M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z " fill="#EA4335"></path></g></svg>
+                     Google
+               </a>
+                </div>
+                <div class="column">
+                 <a class="OauthButton" data-testid="button-oauth-microsoft" href="/auth/microsoft/new?app=wistia&amp;local_source=login" id="microsoft_oauth">
+                     <svg class="OauthButton__icon" height="18" width="18" viewBox="0 0 21 21"><rect x="1" y="1" width="9" height="9" fill="#f25022"></rect><rect x="1" y="11" width="9" height="9" fill="#00a4ef"></rect><rect x="11" y="1" width="9" height="9" fill="#7fba00"></rect><rect x="11" y="11" width="9" height="9" fill="#ffb900"></rect></svg>
+                     Microsoft
+               </a>
+                </div>
+                <div class="column">
+                 <a class="OauthButton" data-testid="button-oauth-sso" href="https://app.wistia.com/login/sso/new" id="sso">
+                     <svg class="OauthButton__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="zoom: 0.70;"><path fill="#62626C" d="M15.885 10.33c.335-.302.83-.387 1.278-.34.261.026.534.022.836.022 2.21 0 3.459-2.096 3.501-4.012.042-1.916-1.002-3.476-3.501-3.988-2.499-.512-3.8.633-4.522 2.078-.35.699-.323 1.609-.197 2.263.08.411 0 .864-.297 1.16C6.819 13.661 3.33 16.858 2 18.5c-.975 1.203.45 2.483 1.345 3.116.363.257.848.188 1.162-.127l.97-.97c.374-.374 1.417 2.028 2.5 2 .353-.008 1.5-1.62 1.5-2 0-.911-2-2-1-3 .906-.906 2.11 2 3 2 .6 0 2-1.5 2-2 0-.706-2.166-2-2-2.5.48-1.448 3.15-3.559 4.408-4.69Zm.145-4.56c0-.614.806-1.037 1.322-1.037.647 0 1.307.65 1.307 1.267 0 .458-.499 1.208-1.307 1.208-.923 0-1.322-.45-1.322-1.439Z"></path></svg>
+                     SSO
+               </a>
+                </div>
+             </div>
+
+                <p class="text-img">Don't have a  <img alt="Wistia" class="Logo--inline" src="/images/logo_468.png" height="19" width="80"> account ?
+                
+                    <a href="/sign-in.html">Sign Up</a>
+                </p>
+                
+     
+             <!-- <fotter class="form-footer">
+                <div>
+                Dont have a
+                <img alt="Wistia" class="Logo--inline" src="/images/logo_468.png" height="19" width="80">
+                account ?
+                <a href="/registration/new?app=wistia">Sign Up</a></div>
+            </fotter> -->
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <form action="" class="form-action">
+        <img src="/images/wristlia logo.svg"  class="logo-wristia" style="align-items: center;">
+        <div class="input-tag">
+       Email <input type="email">
+       Password <input type="password">
+       <input type="checkbox">Remember me
+       <button class="Sign-in">Sign in</button></div>
+       <p>--- Or sign in with---</p>
+       <div class="row">
+       <div class="column">
+        <a class="OauthButton" data-testid="button-oauth-google" href="/auth/google/new?app=wistia&amp;local_source=login" id="google_oauth">
+            <svg class="OauthButton__icon" height="18" width="18" viewBox="0 0 18 18"><g fill="none" fill-rule="evenodd"><path d=" M17.64 9.205c0-.639-.057-1.252-.164-1.841H9v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z " fill="#4285F4"></path><path d=" M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86 -3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z " fill="#34A853"></path><path d=" M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H .957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z " fill="#FBBC05"></path><path d=" M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z " fill="#EA4335"></path></g></svg>
+            Google
+      </a>
+       </div>
+       <div class="column">
+        <a class="OauthButton" data-testid="button-oauth-microsoft" href="/auth/microsoft/new?app=wistia&amp;local_source=login" id="microsoft_oauth">
+            <svg class="OauthButton__icon" height="18" width="18" viewBox="0 0 21 21"><rect x="1" y="1" width="9" height="9" fill="#f25022"></rect><rect x="1" y="11" width="9" height="9" fill="#00a4ef"></rect><rect x="11" y="1" width="9" height="9" fill="#7fba00"></rect><rect x="11" y="11" width="9" height="9" fill="#ffb900"></rect></svg>
+            Microsoft
+      </a>
+       </div>
+       <div class="column">
+        <a class="OauthButton" data-testid="button-oauth-sso" href="https://app.wistia.com/login/sso/new" id="sso">
+            <svg class="OauthButton__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="zoom: 0.70;"><path fill="#62626C" d="M15.885 10.33c.335-.302.83-.387 1.278-.34.261.026.534.022.836.022 2.21 0 3.459-2.096 3.501-4.012.042-1.916-1.002-3.476-3.501-3.988-2.499-.512-3.8.633-4.522 2.078-.35.699-.323 1.609-.197 2.263.08.411 0 .864-.297 1.16C6.819 13.661 3.33 16.858 2 18.5c-.975 1.203.45 2.483 1.345 3.116.363.257.848.188 1.162-.127l.97-.97c.374-.374 1.417 2.028 2.5 2 .353-.008 1.5-1.62 1.5-2 0-.911-2-2-1-3 .906-.906 2.11 2 3 2 .6 0 2-1.5 2-2 0-.706-2.166-2-2-2.5.48-1.448 3.15-3.559 4.408-4.69Zm.145-4.56c0-.614.806-1.037 1.322-1.037.647 0 1.307.65 1.307 1.267 0 .458-.499 1.208-1.307 1.208-.923 0-1.322-.45-1.322-1.439Z"></path></svg>
+            SSO
+      </a>
+       </div>
+    </div>
+    </form>
+
+    <fotter class="form-footer">
+        Dont have a
+        <img alt="Wistia" class="Logo--inline" src="/images/logo_468.png" height="19" width="80">
+        account ?
+        <a href="/registration/new?app=wistia">Sign Up</a>
+    </fotter> -->
+</body>
+</html>
